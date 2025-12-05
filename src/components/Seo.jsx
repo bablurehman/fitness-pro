@@ -1,6 +1,6 @@
 // src/components/SEO.jsx
 import { Helmet } from "react-helmet-async";
-import favicon from '../../public/favicon.webp'
+import favicon from '../../public/favicon.ico'
 
 export default function Seo({
   title = "FitnessPro | Your Fitness Partner",
@@ -10,13 +10,11 @@ export default function Seo({
 }) {
   return (
     <Helmet>
-      {/* Basic Meta */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content="FitnessPro" />
       <meta name="robots" content="index, follow" />
 
-      {/* Open Graph (Facebook, LinkedIn, etc.) */}
       <meta property="og:image" content={image} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

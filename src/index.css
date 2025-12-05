@@ -1,19 +1,38 @@
-.slick-dots li button:before {
-  color: white !important;
-  opacity: 0.7;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.slick-dots li.slick-active button:before {
-  color: #22c55e !important;
-  opacity: 1;
+
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 20px !important;
+  text-align: center !important;
+  z-index: 20 !important;
+}
+
+.swiper-pagination-bullet {
+  background: gray !important;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #22c55e !important;
+  width: 10px !important;
+  height: 10px !important;
 }
 
 [data-aos] {
-  transform: translateZ(0); /* GPU boost */
+  transform: translateZ(0); 
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 [data-aos].aos-animate {
-  transform: translateY(0) !important; /* Reset after AOS finishes */
+  transform: translateY(0) !important;
 }
 
 @media screen and (max-width: 1000px) {
@@ -93,6 +112,12 @@ flex-direction: column !important;
     width: 95%;
     margin: auto;
   }
+
+  .testimonials-card {
+  width:60% !important;
+  margin: auto !important;
+  align-items: center;
+}
 
 }
 
