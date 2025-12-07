@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { HelmetProvider } from "react-helmet-async";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
 
 AOS.init({
   duration: 1000,
@@ -12,18 +16,12 @@ AOS.init({
   offset: 50,
 });
 
-const Root = () => {
-  useEffect(() => {
-    AOS.refresh();
-  }, []);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-  return <App />;
-};
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+root.render(
   <React.StrictMode>
     <HelmetProvider>
-    <Root />      
+    <App />      
     </HelmetProvider>
   </React.StrictMode>
 );
